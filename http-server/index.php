@@ -10,7 +10,7 @@ if (isset($_GET['username']) && isset($_GET['password'])) {
     $password = $_GET['password'];
 
     // Verify the username and password
-    if ($username === $correct_username && $password === $correct_password) {
+    if (($username === $correct_username) && $password === $correct_password) {
         if (file_exists($file_path)) {
             // Set headers to force download
             header('Content-Description: File Transfer');
@@ -33,7 +33,7 @@ if (isset($_GET['username']) && isset($_GET['password'])) {
     }
 } else {
     http_response_code(400);
-    $response = array('message' => 'Username and/or password parameter is missing!');
+    $response = array('message' => 'username and/or password parameter is missing!');
 }
 
 // Set the content type to JSON
