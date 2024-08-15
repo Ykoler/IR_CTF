@@ -1,0 +1,5 @@
+// Debug information for NSA attack
+// Plain text was readable
+
+IV = first 16 bytes of each file
+CBC
